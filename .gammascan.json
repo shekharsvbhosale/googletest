@@ -1,0 +1,48 @@
+{
+	"gammaAccess": {
+		"url": "http://192.168.2.236:3000",
+		"userName": "chandrashekhar.bhosale@acellere.com",
+		"password": "admin1234"
+	},
+	"repositories": [{
+			"repository": {
+				"uid": "2330be7f9b364d2e19037ec7711223ab",
+				"projectName": "jenkinsPlugin_GoogleTest",
+				"sources": {
+					"baseDir": "$WORKSPACE"
+				}
+			},
+			"dataDir": "$GAMMA_DATA",
+			"modules": {
+				"codeissues": [{
+						"name": "cppcheck"
+					}, {
+						"name": "gamma_cxx"
+					}
+				],
+				"coverage": [{
+						"name": "gcov",
+						"config": {
+							"options": [{
+									"name": "reportDir",
+									"value": "$WORKSPACE/output/gcov"
+								}
+							]
+						}
+					}
+				],
+				"unittest": [{
+						"name": "gtest",
+						"config": {
+							"options": [{
+									"name": "reportDir",
+									"value": "$WORKSPACE/output/gtest"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
+}
